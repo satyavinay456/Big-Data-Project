@@ -1,0 +1,24 @@
++--------------------+-----+
+|            language|Count|
++--------------------+-----+
+|             English| 6279|
+|            Japanese| 3194|
+|             Spanish|  967|
+|              Arabic|  322|
+|             Russian|  267|
+|              French|  247|
+|               Dutch|  240|
+|             Italian|  162|
+|              German|  107|
+|          Portuguese|   88|
+|                Thai|   79|
+|          Indonesian|   70|
+|             Turkish|   62|
+|              Polish|   38|
+|Chinese (Simplified)|   33|
+|              Korean|   22|
+|               Czech|   12|
+|Chinese (Traditio...|    8|
+|             Swedish|    8|
+|          Vietnamese|    7|
++--------------------+-----+

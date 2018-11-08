@@ -1,0 +1,24 @@
++---------+-----+----------+
+|phoneType|state|type_count|
++---------+-----+----------+
+|  Samsung|   NH|         1|
+|   iphone|   CA|        38|
+|   iphone|   MI|         1|
+|   iphone|   TN|         1|
+|  Samsung|   MT|         1|
+|   iphone|   UT|        13|
+|   iphone|   MN|         1|
+|  Samsung|   VA|         4|
+|   iphone|   AZ|         3|
+|     Moto|   NE|         2|
+|  Samsung|   OH|         7|
+|   iphone|   OR|         1|
+|   iphone|   KS|         1|
+|   iphone|   WA|        15|
+|   iphone|   NC|         2|
+|   iphone|   GA|         4|
+|  Samsung|   AR|         3|
+|  Samsung|   OR|         1|
+|   iphone|   VA|         4|
+|   iphone|   DE|         5|
++---------+-----+----------+

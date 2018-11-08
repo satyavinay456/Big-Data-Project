@@ -1,0 +1,13 @@
++--------------+-----+
+|     phoneType|Count|
++--------------+-----+
+|      Iphone X|   10|
+|    BlackBerry|   10|
+|         Redmi|   10|
+|        Galaxy|   10|
+|           HTC|   10|
+|       OnePlus|   10|
+|          Moto|   10|
+|iphone8 Series|   10|
+|iphone7 Series|    6|
++--------------+-----+

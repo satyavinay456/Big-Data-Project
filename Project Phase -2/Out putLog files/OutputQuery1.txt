@@ -1,0 +1,11 @@
+Iphone : 720
+Samsung : 304
+Moto : 36
+Redmi : 4
+Xiaomi : 113
+Nokia : 50
+Lenovo : 13
+Oppo : 0
+OnePlus : 33
+BlackBerry : 17
+HTC : 21
