@@ -1,0 +1,39 @@
+
+object test {
+  import org.apache.spark.{SparkConf, SparkContext}
+
+ 
+
+    def main(args: Array[String]): Unit = {
+      val sparkConf = new SparkConf().setAppName("SparkWordCount").setMaster("local[*]")
+
+      val sc = new SparkContext(sparkConf)
+
+      // Contains SQLContext which is necessary to execute SQL queries
+      val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+
+      // Reads json file and stores in a variable
+     
+	  val textFile = sqlContext.read.json("C:\\Users\\praga\\Desktop\\Data\\tweets.json")
+
+
+      //To register tweets data as a table
+      textFile.createOrReplaceTempView("tweets")
+
+      val disCat = {
+        sqlContext.sql("SELECT SUBSTR(text, LOCATE('#', text)) hashtag FROM tweets WHERE text like '%#%' order by hashtag")
+      }
+
+      disCat.createOrReplaceTempView("disCatresult")
+      val op = sqlContext.sql("select hashtag from disCatresult GROUP BY hashtag order by hashtag")
+
+      op.createOrReplaceTempView("result")
+
+      op.show()
+
+
+    }
+
+
+
+}

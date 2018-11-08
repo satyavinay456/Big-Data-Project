@@ -1,0 +1,36 @@
+/**
+  * Created by Sri Sai Anusha on 30-09-2017.
+  */
+import org.apache.spark._
+
+object word {
+
+    def main(args: Array[String]) {
+      System.setProperty("hadoop.home.dir", "C:\\Users\\Sri Sai Anusha\\Desktop\\Winutils")
+      val inputFile = "C:\\Users\\Sri Sai Anusha\\Desktop\\URLExtractionOutput.txt"
+      val outputFile = "C:\\Users\\Sri Sai Anusha\\Desktop\\outputFile"
+      val conf = new SparkConf().setAppName("wordCount").setMaster("local[*]")
+      // Create a Scala Spark Context.
+      val sc = new SparkContext(conf)
+      val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+      // Load our input data.
+      val input =  sc.textFile(inputFile)
+      // Split up into words.
+      val words = input.flatMap(line => line.split(" "))
+      // Transform into word and count.
+      val counts = words.map(word => (word, 1)).reduceByKey{case (x, y) => x + y}
+      // Save the word count back out to a text file, causing evaluation.
+      counts.saveAsTextFile(outputFile)
+
+      val ss = sqlContext.read.json("C:\\Users\\Sri Sai Anusha\\Desktop\\out.txt")
+      val output = ss.toDF()
+      val out = output.registerTempTable("out")
+      ss.createOrReplaceTempView("out")
+      ss.show()
+
+
+    }
+
+
+
+}
